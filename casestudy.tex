@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[naustrian]{babel}
+\usepackage{hyperref} 
+
+
+\begin{document}
+
+\title{Case study: Jenkins auf Azure Pipelines Migration}
+\author{Simon Danglmaier}
+
+\maketitle
+
+\section*{Aufgabe}
+
+\begin{itemize}
+    \item Migration existierender Jenkins CI-Environment auf Azure Pipelines
+    \item Laufender Betrieb muss gewährleistet sein
+\end{itemize}
+
+\section*{Plan}
+\begin{enumerate}
+    \item Vertrautmachen mit Jenkins \& Azure Konzepten
+    \item Evaluierung \& Analyse von aktuellem Setup
+    \item Falls möglich Aufgliederung in Subprojekte, die einzeln migriert werden können
+          \begin{itemize}
+              \item Core-Library
+              \item Statische Analyse
+          \end{itemize}
+    \item Portierung eines minimalen Sub-Teils des Projekts
+          \begin{itemize}
+              \item Erlaubt Aufbau von Know-How
+              \item Verifikation von portiertem Teil mit Resultat von alter Jenkins Pipeline und neuer Azure Pipeline
+          \end{itemize}
+    \item Portierung des restlichen Projekts
+\end{enumerate}
+
+\section*{Offene Fragen}
+
+\begin{itemize}
+    \item Erfahrungsberichte, Resource, Unterstützung aus anderen Departments: Haben andere Departments diese Umstellung bereits abgeschlossen?
+    \item Anforderungen an neue Pipeline?
+    \item Build-Agent Setup?
+    \item Gibt es restriktive Zeitlimits, bis wann die Jenkins Pipeline migriert werden muss?
+    \item Parallelbetrieb von alter und neuer Pipeline möglich?
+    \item Dokumentation zu aktuellem Setup?
+    \item Docker Builds?
+\end{itemize}
+
+\section*{Resourcen}
+
+\begin{itemize}
+    \item \href{https://learn.microsoft.com/en-us/azure/devops/pipelines/migrate/from-jenkins?view=azure-devops}{Microsoft Docs: Migrate from Jenkins to Azure Pipelines}
+    \item \href{https://marketplace.visualstudio.com/items?itemName=ms-vsts.services-jenkins}{Azure DevOps Plugin: Jenkins Integration}
+\end{itemize}
+
+\end{document}
